@@ -1,0 +1,38 @@
+
+<ion-header no-border>
+
+  <ion-navbar color="fondo">
+    <ion-title>{{ pages[selectedTab].title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content>
+
+ 
+        <ion-item>
+          <p>{{imageURI}}</p>
+          <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+        </ion-item>
+        <ion-item>
+          <h4>Image Preview</h4>
+          <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+        </ion-item>
+        <ion-item>
+          <button ion-button (click)="uploadFile()">Upload</button>
+        </ion-item>
+ 
+
+  
+
+   <super-tabs tabsPlacement="top" toolbarBackground="fondo" toolbarColor="light" indicatorColor="light"
+  (tabSelect)="onTabSelect($event)">
+  <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
+</super-tabs>
+
+
+
+
+</ion-content>
