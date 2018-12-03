@@ -12,9 +12,9 @@ export class AccountPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private memesService: MemesProvider) {
   }
 
-  ionViewDidLoad() {
+ /* ionViewDidLoad() {
     console.log('ionViewDidLoad AccountPage');
     this.memesService.getMemes().subscribe(respuesta => {console.log(respuesta)})
-  }
+  }*/
 
 }
